@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dvon5gmovixnj"]
+
+[ext_resource type="Script" uid="uid://b4k1yk2nvbvbp" path="res://scripts/page.gd" id="1_kkqxg"]
+[ext_resource type="Texture2D" uid="uid://c8lx740pwt6n7" path="res://assets/images/foni-papik-pro-tmtr-p-kartinki-listok-staroi-bumagi-na-prozrachn-14.png" id="2_1g3qv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lufvv"]
+size = Vector2(20, 30)
+
+[node name="Page" type="Area2D" unique_id=316031987]
+script = ExtResource("1_kkqxg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=346624348]
+visible = false
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 15.0
+offset_bottom = 7.0
+color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+
+[node name="Body" type="Sprite2D" parent="." unique_id=432722102]
+position = Vector2(10, 15)
+scale = Vector2(0.015302218, 0.016465422)
+texture = ExtResource("2_1g3qv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=270263945]
+position = Vector2(10, 15)
+shape = SubResource("RectangleShape2D_lufvv")

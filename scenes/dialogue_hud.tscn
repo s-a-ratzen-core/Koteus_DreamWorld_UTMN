@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bm6ssbc08etq1"]
+
+[ext_resource type="Script" uid="uid://b4ajo16sllk5m" path="res://scripts/dialogue_hud.gd" id="1_3y08y"]
+[ext_resource type="Texture2D" uid="uid://dgap4qgsm84rg" path="res://assets/images/Koteus_avatar.png" id="2_crn4r"]
+
+[node name="DialogueHUD" type="CanvasLayer" unique_id=909330082]
+script = ExtResource("1_3y08y")
+
+[node name="ComicSlide" type="TextureRect" parent="." unique_id=558369727]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="." unique_id=1734984924]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueText" type="Label" parent="Panel" unique_id=1692010931]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 25.0
+offset_right = 1140.0
+offset_bottom = 125.0
+
+[node name="InventoryText" type="Label" parent="Panel" unique_id=1220836451]
+layout_mode = 0
+offset_left = 1102.0
+offset_top = 25.0
+offset_right = 1260.0
+offset_bottom = 125.0
+text = "🍓: 0  
+🫐: 0  
+🍋: 0"
+
+[node name="Avatar" type="Sprite2D" parent="Panel" unique_id=1821480263]
+position = Vector2(73, 75)
+scale = Vector2(1.7333333, 1.8333334)
+texture = ExtResource("2_crn4r")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c616rt8cdu2jj"]
+
+[ext_resource type="Script" uid="uid://4qrml2qa48gb" path="res://scripts/bench_platform.gd" id="1_478to"]
+[ext_resource type="Texture2D" uid="uid://b7s883yjwbgu8" path="res://assets/images/Bench.png" id="2_h7h1c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7h1c"]
+size = Vector2(300, 128.57144)
+
+[node name="BenchPlatform" type="AnimatableBody2D" unique_id=93652521]
+y_sort_enabled = true
+script = ExtResource("1_478to")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1352693121]
+z_index = 1
+position = Vector2(60, 14.999996)
+scale = Vector2(0.39999995, 0.23333332)
+texture = ExtResource("2_h7h1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2018077699]
+position = Vector2(60.000008, 15)
+scale = Vector2(0.3999999, 0.23333332)
+shape = SubResource("RectangleShape2D_h7h1c")

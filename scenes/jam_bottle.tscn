@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c718s8lh6gqyk"]
+
+[ext_resource type="Script" uid="uid://c5etar14bi65r" path="res://scripts/jam_bottle.gd" id="1_jga81"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ouylp"]
+size = Vector2(16, 24)
+
+[node name="JamBottle" type="Area2D" unique_id=1584409818]
+script = ExtResource("1_jga81")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1937914412]
+position = Vector2(8, 12)
+shape = SubResource("RectangleShape2D_ouylp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1482204942]

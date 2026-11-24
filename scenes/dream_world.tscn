@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://c71ii4lakwwhf"]
+
+[ext_resource type="Script" uid="uid://b5ko4yrbk6ut2" path="res://scripts/dream_world.gd" id="1_mo1bm"]
+[ext_resource type="Texture2D" uid="uid://bpy5yofo6x8g8" path="res://assets/images/general.png" id="2_6ijwk"]
+[ext_resource type="PackedScene" uid="uid://c616rt8cdu2jj" path="res://scenes/bench_platform.tscn" id="2_deu7r"]
+[ext_resource type="PackedScene" uid="uid://dvon5gmovixnj" path="res://scenes/page.tscn" id="3_y4617"]
+[ext_resource type="PackedScene" uid="uid://c718s8lh6gqyk" path="res://scenes/jam_bottle.tscn" id="4_8ssdd"]
+[ext_resource type="PackedScene" uid="uid://bm6ssbc08etq1" path="res://scenes/dialogue_hud.tscn" id="5_g0gcm"]
+[ext_resource type="PackedScene" uid="uid://vm3mgicn302u" path="res://scenes/koteus_player.tscn" id="6_6ijwk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo1bm"]
+size = Vector2(1280, 60)
+
+[node name="DreamWorld" type="Node2D" unique_id=1248794883]
+script = ExtResource("1_mo1bm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=702720229]
+position = Vector2(639.5, 255)
+scale = Vector2(12.790001, 7.083333)
+texture = ExtResource("2_6ijwk")
+
+[node name="DialogueHUD" parent="." unique_id=909330082 instance=ExtResource("5_g0gcm")]
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=203393287]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1229599622]
+position = Vector2(640, 540)
+shape = SubResource("RectangleShape2D_mo1bm")
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=1850416797]
+offset_top = 510.0
+offset_right = 1280.0
+offset_bottom = 570.0
+color = Color(0.9372549, 0.44705883, 0.4, 1)
+
+[node name="KoteusPlayer" parent="." unique_id=187458518 instance=ExtResource("6_6ijwk")]
+position = Vector2(640, 360)
+
+[node name="Page" type="Node2D" parent="." unique_id=513747283]
+position = Vector2(882, 464)
+
+[node name="Page" parent="Page" unique_id=1399099466 instance=ExtResource("3_y4617")]
+position = Vector2(-445, 11)
+
+[node name="Page2" parent="Page" unique_id=75266006 instance=ExtResource("3_y4617")]
+position = Vector2(-99, -177)
+
+[node name="Page3" parent="Page" unique_id=1396453804 instance=ExtResource("3_y4617")]
+position = Vector2(-621, -392)
+
+[node name="Page4" parent="Page" unique_id=1399826658 instance=ExtResource("3_y4617")]
+position = Vector2(-524, -109)
+
+[node name="Page5" parent="Page" unique_id=957086003 instance=ExtResource("3_y4617")]
+position = Vector2(-786, 4)
+
+[node name="Page6" parent="Page" unique_id=290690192 instance=ExtResource("3_y4617")]
+position = Vector2(-861, -54)
+
+[node name="Page7" parent="Page" unique_id=1557677985 instance=ExtResource("3_y4617")]
+position = Vector2(-828, -229)
+
+[node name="Page15" parent="Page" unique_id=316031987 instance=ExtResource("3_y4617")]
+position = Vector2(160, -427)
+
+[node name="Page8" parent="Page" unique_id=1444031388 instance=ExtResource("3_y4617")]
+position = Vector2(-422, -404)
+
+[node name="Page9" parent="Page" unique_id=292759610 instance=ExtResource("3_y4617")]
+position = Vector2(-501, -190)
+
+[node name="Page10" parent="Page" unique_id=1529978004 instance=ExtResource("3_y4617")]
+position = Vector2(-730, -120)
+
+[node name="Page11" parent="Page" unique_id=412696123 instance=ExtResource("3_y4617")]
+position = Vector2(243, -45)
+
+[node name="Page12" parent="Page" unique_id=234553319 instance=ExtResource("3_y4617")]
+position = Vector2(205, -156)
+
+[node name="Page13" parent="Page" unique_id=1533839146 instance=ExtResource("3_y4617")]
+position = Vector2(-50, -1)
+
+[node name="Page14" parent="Page" unique_id=1902441396 instance=ExtResource("3_y4617")]
+position = Vector2(360, -276)
+
+[node name="Jam" type="Node2D" parent="." unique_id=613752527]
+
+[node name="JamBottle" parent="Jam" unique_id=1480633204 instance=ExtResource("4_8ssdd")]
+position = Vector2(626, 471)
+jam_type = "blueberry"
+
+[node name="JamBottle2" parent="Jam" unique_id=451771506 instance=ExtResource("4_8ssdd")]
+position = Vector2(210, 445)
+jam_type = "lemon"
+
+[node name="JamBottle3" parent="Jam" unique_id=1392273206 instance=ExtResource("4_8ssdd")]
+position = Vector2(925, 421)
+
+[node name="Bench" type="Node2D" parent="." unique_id=1461120737]
+
+[node name="BenchPlatform" parent="Bench" unique_id=1342499050 instance=ExtResource("2_deu7r")]
+position = Vector2(309, 304)
+
+[node name="BenchPlatform2" parent="Bench" unique_id=267596639 instance=ExtResource("2_deu7r")]
+position = Vector2(708, 316)
+
+[node name="BenchPlatform3" parent="Bench" unique_id=452783701 instance=ExtResource("2_deu7r")]
+position = Vector2(1050, 357)
